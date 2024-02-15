@@ -25,6 +25,14 @@ public class MemberServiceImpl implements MemberService {
 		mdao.insertMember(vo);
 	
 	}
+
+	@Override
+	public MemberVO MemberLogin(MemberVO vo) {
+		logger.debug("s: MemberLogin()");
+		
+		return mdao.loginMember(vo);
+		
+	}
 	
 	
 	

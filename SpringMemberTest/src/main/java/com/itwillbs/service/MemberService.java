@@ -19,7 +19,7 @@ public interface MemberService {
 		
 		
 		// 로그인 메서드
-	
+		public MemberVO MemberLogin(MemberVO vo);
 		
 		// 회원 리스트 가져오기
 		
