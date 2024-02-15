@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.w3c.dom.ls.LSException;
 
 import com.itwillbs.domain.MemberVO;
 import com.itwillbs.service.MemberService;
@@ -155,6 +156,15 @@ public class MemberController {
 		return "/member/delete";
 	}
 	
+	// 회원정보 목록 조회GET
+	@GetMapping(value = "/list")
+	public void memberListGET(HttpSession session) {
+		logger.debug("memberListGET()");
+		
+		session.setAttribute("mList", mService.MemberList());
+		
+		logger.debug("/member/list.jsp 이동");
+	}
 	
 	
 	

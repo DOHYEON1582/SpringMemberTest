@@ -22,5 +22,5 @@ public interface MemberService {
 		public MemberVO MemberLogin(MemberVO vo);
 		
 		// 회원 리스트 가져오기
-		
+		public List<MemberVO> MemberList();
 }
