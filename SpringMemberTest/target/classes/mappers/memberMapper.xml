@@ -15,7 +15,17 @@
   <delete id="deleteMember">
   	delete from tbl_member 
   	where userid=#{userid} and userpw=#{userpw} 
-  
   </delete>
+  
+  <!-- 회원정보 가져오기 -->
+  <select id="getMember" resultType="com.itwillbs.domain.MemberVO">
+  	select * from tbl_member 
+  	where userid=#{userid}
+  
+  </select>
+  
+  
+  
+  
   
   </mapper>

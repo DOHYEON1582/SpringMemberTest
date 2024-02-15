@@ -13,7 +13,7 @@ public interface MemberDAO {
 	public int deleteMember(MemberVO vo);
 	
 	// 정보 가져오기
-	public MemberVO getMember(MemberVO vo);
+	public MemberVO getMember(String userid);
 	
 	// 정보 수정하기
 	public void updateMember(MemberVO vo);

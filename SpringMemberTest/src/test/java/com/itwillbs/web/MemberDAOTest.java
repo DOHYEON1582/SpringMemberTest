@@ -73,16 +73,16 @@ public class MemberDAOTest {
 //		
 //	}
 //	
-//	//@Test
-//	public void 회원정보조회() {
-//		logger.debug(" 특정 사용자의 정보를 조회하는 메서드 실행! ");
-//		logger.debug(" id : admin, pw : 123 계정정보 사용");
-//		
-//		
-//		MemberVO vo = mdao.getMember("admin");
-//		logger.debug("vo : "+vo);
-//		
-//	}
+	@Test
+	public void 회원정보조회() {
+		logger.debug(" 특정 사용자의 정보를 조회하는 메서드 실행! ");
+		logger.debug(" id : admin, pw : 123 계정정보 사용");
+		
+		
+		MemberVO vo = mdao.getMember("admin");
+		logger.debug("vo : "+vo);
+		
+	}
 //	
 //	// 회원정보 수정 - admin/123 계정의 이름, updatedate 변경
 //	//@Test
@@ -100,7 +100,7 @@ public class MemberDAOTest {
 //	}
 //	
 //	// 회원정보 삭제 - admin/123 계정정보 삭제
-	@Test
+	//@Test
 	public void 회원정보삭제() {
 		logger.debug("회원정보삭제() 메서드 실행");
 		

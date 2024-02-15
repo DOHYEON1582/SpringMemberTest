@@ -42,7 +42,10 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public MemberVO getMember(MemberVO vo) {
+	public MemberVO getMember(String userid) {
+		logger.debug("DAO : getMember 실행");
+		
+		sqlsession.selectOne(NAMESPACE+"getMember", userid);
 		return null;
 	}
 
