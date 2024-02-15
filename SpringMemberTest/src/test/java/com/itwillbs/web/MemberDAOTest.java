@@ -73,7 +73,7 @@ public class MemberDAOTest {
 //		
 //	}
 //	
-	@Test
+	//@Test
 	public void 회원정보조회() {
 		logger.debug(" 특정 사용자의 정보를 조회하는 메서드 실행! ");
 		logger.debug(" id : admin, pw : 123 계정정보 사용");
@@ -84,20 +84,20 @@ public class MemberDAOTest {
 		
 	}
 //	
-//	// 회원정보 수정 - admin/123 계정의 이름, updatedate 변경
-//	//@Test
-//	public void 회원정보수정() {
-//		logger.debug("회원정보수정() 메서드 실행");
-//		
-//		MemberVO uvo = new MemberVO();
-//		uvo.setUserid("admin");
-//		uvo.setUserpw("123");
-//		uvo.setUsername("admin1");
-//		
-//		mdao.updateMember(uvo);
-//		
-//		
-//	}
+	// 회원정보 수정 - admin/123 계정의 이름, updatedate 변경
+	@Test
+	public void 회원정보수정() {
+		logger.debug("회원정보수정() 메서드 실행");
+		
+		MemberVO uvo = new MemberVO();
+		uvo.setUserid("admin");
+		uvo.setUserpw("123");
+		uvo.setUsername("관리자");
+		
+		mdao.updateMember(uvo);
+		
+		
+	}
 //	
 //	// 회원정보 삭제 - admin/123 계정정보 삭제
 	//@Test

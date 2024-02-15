@@ -35,23 +35,23 @@ public class MemberDAOImpl implements MemberDAO {
 	public int deleteMember(MemberVO vo) {
 		logger.debug("DAO : deleteMember 실행");
 		
-		sqlsession.delete(NAMESPACE+"deleteMember",vo);
-		
-		logger.debug("회원정보 삭제 완료!");
-		return 0;
+		return sqlsession.delete(NAMESPACE+"deleteMember",vo);
+	
 	}
 
 	@Override
 	public MemberVO getMember(String userid) {
 		logger.debug("DAO : getMember 실행");
 		
-		sqlsession.selectOne(NAMESPACE+"getMember", userid);
-		return null;
+		return sqlsession.selectOne(NAMESPACE+"getMember", userid);
+		
 	}
 
 	@Override
 	public void updateMember(MemberVO vo) {
-		// TODO Auto-generated method stub
+		logger.debug("DAO : updateMember 실행");
+		
+		sqlsession.update(NAMESPACE+"updateMember", vo);
 
 	}
 
