@@ -74,7 +74,16 @@ public class MemberController {
 		logger.debug("/member/main.jsp 페이지 이동");
 	}
 	
-	
+	// 로그아웃GET
+	@RequestMapping(value = "/logout", method = RequestMethod.GET)
+	public String logoutGET(HttpSession session) {
+		logger.debug("logoutGET() 실행");
+		
+		// 세션 삭제
+		session.invalidate();
+		
+		return "redirect:/member/main";
+	}
 	
 	
 	
