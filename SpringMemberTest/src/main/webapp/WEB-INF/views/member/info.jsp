@@ -16,7 +16,7 @@
 	<h3>회원가입일 : ${resultVO.regdate }</h3>
 	<h3>마지막수정일 : ${resultVO.updatedate }</h3>
 	
-	<h4><a href="/main">메인으로</a></h4>
+	<h4><a href="/member/main">메인으로</a></h4>
 
 </body>
 </html>

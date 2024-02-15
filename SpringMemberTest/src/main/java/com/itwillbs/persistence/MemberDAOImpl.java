@@ -48,10 +48,10 @@ public class MemberDAOImpl implements MemberDAO {
 	}
 
 	@Override
-	public void updateMember(MemberVO vo) {
+	public int updateMember(MemberVO vo) {
 		logger.debug("DAO : updateMember 실행");
 		
-		sqlsession.update(NAMESPACE+"updateMember", vo);
+		return sqlsession.update(NAMESPACE+"updateMember", vo);
 
 	}
 

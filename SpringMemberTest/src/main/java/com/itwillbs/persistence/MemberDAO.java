@@ -16,7 +16,7 @@ public interface MemberDAO {
 	public MemberVO getMember(String userid);
 	
 	// 정보 수정하기
-	public void updateMember(MemberVO vo);
+	public int updateMember(MemberVO vo);
 	
 	// 로그인 메서드
 	public MemberVO loginMember(MemberVO vo);
