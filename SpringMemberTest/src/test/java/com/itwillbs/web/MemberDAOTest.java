@@ -114,16 +114,16 @@ public class MemberDAOTest {
 		if(result == 1) logger.debug("회원정보 삭제 완료!");
 		else logger.debug("회원정보 삭제 실패!");
 	}
-//	
-//	@Test
-//	public void 회원목록출력() {
-//		logger.debug("회원목록출력() 확인");
-//		List<MemberVO> mList = mdao.getMemberList();
-//		
-//		logger.debug("mList : "+mList);
-//	}
-//	
-//	
+	
+	@Test
+	public void 회원목록출력() {
+		logger.debug("회원목록출력() 확인");
+		List<MemberVO> mList = mdao.getMemberList();
+		
+		logger.debug("mList : "+mList);
+	}
+	
+	
 	
 	
 	

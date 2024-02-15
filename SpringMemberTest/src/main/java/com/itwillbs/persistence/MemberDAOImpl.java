@@ -64,7 +64,9 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public List<MemberVO> getMemberList() {
-		return null;
+		logger.debug("DAO : getMemberList() 실행");
+		
+		return sqlsession.selectList(NAMESPACE+"getMemberList");
 	}
 
 }
