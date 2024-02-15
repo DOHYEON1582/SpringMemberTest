@@ -13,7 +13,7 @@ public interface MemberService {
 		
 		
 		// 정보 가져오기
-		
+		public MemberVO MemberInfo(String userid);
 		
 		// 정보 수정하기
 		

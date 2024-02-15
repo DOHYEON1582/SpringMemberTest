@@ -3,9 +3,11 @@ package com.itwillbs.web;
 import javax.inject.Inject;
 import javax.servlet.http.HttpSession;
 
+import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -60,7 +62,7 @@ public class MemberController {
 		if(resultVO != null) {
 			logger.debug("회원 정보 확인 완료!");
 			logger.debug("페이지 이동");
-			session.setAttribute("resultVO", resultVO);
+			session.setAttribute("userid", resultVO.getUserid());
 			return "redirect:/member/main";
 		}
 		logger.debug("회원정보 없음!");
@@ -85,7 +87,19 @@ public class MemberController {
 		return "redirect:/member/main";
 	}
 	
-	
+	// 회원정보 조회GET
+	@GetMapping(value = "info")
+	public void memberInfo(HttpSession session) {
+		logger.debug("memberInfo() 실행");
+		
+		String userid = (String)session.getAttribute("userid");
+		MemberVO resultVO = mService.MemberInfo(userid);
+		
+		// 전달정보 저장
+		session.setAttribute("resultVO", resultVO);
+		
+		logger.debug("/member/info.jsp 페이지로 이동");
+	}
 	
 	
 	

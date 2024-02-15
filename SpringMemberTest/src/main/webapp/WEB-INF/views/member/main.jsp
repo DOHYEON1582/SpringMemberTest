@@ -8,18 +8,17 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<c:if test="${empty resultVO}">
+	<c:if test="${empty userid}">
 		<c:redirect url="/member/login"/>
 	</c:if>
 
 
 	<h2>/member/main.jsp</h2>
-	<h2>${resultVO.userid }님 환영합니다!</h2>
-	<h2>${resultVO.useremail }</h2>
+	<h2>${userid}님 환영합니다!</h2>
 	<input type="button" value="로그아웃" onclick="location.href='/member/logout';">
 	<hr>
 	
-	
+	<a href="/member/info">회원정보 조회</a>
 
 </body>
 </html>
