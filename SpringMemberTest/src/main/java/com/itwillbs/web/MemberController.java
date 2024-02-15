@@ -67,6 +67,21 @@ public class MemberController {
 		return "/member/login";
 	}
 	
+	// 메인GET
+	@RequestMapping(value = "/main", method = RequestMethod.GET)
+	public void mainGET() {
+		logger.debug("mainGET() 실행");
+		logger.debug("/member/main.jsp 페이지 이동");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	
