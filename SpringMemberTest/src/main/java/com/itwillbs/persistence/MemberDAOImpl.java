@@ -33,6 +33,11 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public int deleteMember(MemberVO vo) {
+		logger.debug("DAO : deleteMember 실행");
+		
+		sqlsession.delete(NAMESPACE+"deleteMember",vo);
+		
+		logger.debug("회원정보 삭제 완료!");
 		return 0;
 	}
 

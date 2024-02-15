@@ -11,4 +11,11 @@
   	value (#{userid}, #{userpw}, #{username}, #{useremail})
   </insert>
   
+  <!-- 회원 삭제 -->
+  <delete id="deleteMember">
+  	delete from tbl_member 
+  	where userid=#{userid} and userpw=#{userpw} 
+  
+  </delete>
+  
   </mapper>
