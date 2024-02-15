@@ -130,6 +130,33 @@ public class MemberController {
 		return "/member/update";
 	}
 	
+	// 회원정보 삭제GET
+	@GetMapping(value = "/delete")
+	public void memberDeleteGET() {
+		logger.debug("memberDeleteGET() 실행");
+		logger.debug("/member/delete.jsp 실행");
+		
+	}
+	
+	// 회원정보 삭제POST
+	@PostMapping(value = "delete")
+	public String memberDeletePOST(MemberVO vo, HttpSession session) {
+		logger.debug("memberDeletePOST()");
+		logger.debug("전달정보 : "+vo);
+		
+		int result = mService.MemberDelete(vo);
+		if(result ==1) {
+			logger.debug("회원정보 삭제 완료!");
+			session.invalidate();
+			return "redirect:/member/main";
+					
+		}
+		
+		return "/member/delete";
+	}
+	
+	
+	
 	
 	
 	

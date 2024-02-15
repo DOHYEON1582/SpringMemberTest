@@ -10,7 +10,7 @@ public interface MemberService {
 		public void MemberJoin(MemberVO vo);
 		
 		// 회원 삭제
-		
+		public int MemberDelete(MemberVO vo);
 		
 		// 정보 가져오기
 		public MemberVO MemberInfo(String userid);
