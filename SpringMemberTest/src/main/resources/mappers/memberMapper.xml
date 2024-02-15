@@ -31,7 +31,12 @@
   
   </update>
   
-  
+  <!-- 로그인  -->
+  <select id="loginMember" resultType="com.itwillbs.domain.MemberVO">
+  	select * from tbl_member 
+  	where userid=#{userid} and userpw=#{userpw}
+  	
+  </select>
   
   
   

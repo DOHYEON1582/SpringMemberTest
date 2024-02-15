@@ -53,26 +53,26 @@ public class MemberDAOTest {
 		
 	}
 	
-//	//@Test
-//	public void 로그인테스트() {
-//		logger.debug("로그인테스트() 실행");
-//		
-//		//임시 사용자 계정
-//		MemberVO vo = new MemberVO();
-//		vo.setUserid("admin");
-//		vo.setUserpw("123");
-//		
-//		MemberVO resultVO = mdao.loginMember(vo);
-//		
-//		if(resultVO != null) {
-//			logger.debug("로그인 성공!");
-//			logger.debug("메인페이지로 이동");
-//		}else{
-//			logger.debug("로그인 실패!");
-//		}
-//		
-//	}
-//	
+	//@Test
+	public void 로그인테스트() {
+		logger.debug("로그인테스트() 실행");
+		
+		//임시 사용자 계정
+		MemberVO vo = new MemberVO();
+		vo.setUserid("admin");
+		vo.setUserpw("123");
+		
+		MemberVO resultVO = mdao.loginMember(vo);
+		
+		if(resultVO != null) {
+			logger.debug("로그인 성공!");
+			logger.debug("메인페이지로 이동");
+		}else{
+			logger.debug("로그인 실패!");
+		}
+		
+	}
+	
 	//@Test
 	public void 회원정보조회() {
 		logger.debug(" 특정 사용자의 정보를 조회하는 메서드 실행! ");
@@ -85,7 +85,7 @@ public class MemberDAOTest {
 	}
 //	
 	// 회원정보 수정 - admin/123 계정의 이름, updatedate 변경
-	@Test
+	//@Test
 	public void 회원정보수정() {
 		logger.debug("회원정보수정() 메서드 실행");
 		

@@ -57,7 +57,9 @@ public class MemberDAOImpl implements MemberDAO {
 
 	@Override
 	public MemberVO loginMember(MemberVO vo) {
-		return null;
+		logger.debug("DAO : loginMember() 실행");
+		
+		return sqlsession.selectOne(NAMESPACE+"loginMember", vo);
 	}
 
 	@Override
